@@ -63,7 +63,7 @@ TP:CreateButton({
 TP:CreateButton({
     Name = "Kill Ronin",
     Callback = function()
-        local ronin = workspace:FindFirstChild("Ronin")
+        local ronin = workspace:FindFirstChild("ronin")
         if ronin and ronin:FindFirstChild("Humanoid") then
             ronin.Humanoid.Health = 0
         end
@@ -79,6 +79,14 @@ INFO:CreateParagraph({
     Title = "There was no scripts for winter ",
     Content = "so i made it myself"
 })
+
+})
+
+INFO:CreateParagraph({
+    Title = "To be able to use ronin",
+    Content = "make sure ronin is following you, or else it wont work"
+})
+
 
 INFO:CreateParagraph({
     Title = "Made by",
