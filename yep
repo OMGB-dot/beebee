@@ -80,8 +80,6 @@ INFO:CreateParagraph({
     Content = "so i made it myself"
 })
 
-})
-
 INFO:CreateParagraph({
     Title = "To be able to use ronin",
     Content = "make sure ronin is following you, or else it wont work"
