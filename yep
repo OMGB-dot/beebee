@@ -11,7 +11,6 @@ local TP = WN:CreateTab("Teleports", 4483362458)
 local LP = game:GetService("Players").LocalPlayer
 local INFO = WN:CreateTab("Info", 4483362458)
 
-
 local function TPto(pos)
     local char = LP.Character
     if char and char:FindFirstChild("HumanoidRootPart") then
@@ -58,6 +57,16 @@ TP:CreateButton({
     Name = "Mars",
     Callback = function()
         TPto(Vector3.new(59, 46028, 8299)) 
+    end
+})
+
+TP:CreateButton({
+    Name = "Kill Ronin",
+    Callback = function()
+        local ronin = workspace:FindFirstChild("Ronin")
+        if ronin and ronin:FindFirstChild("Humanoid") then
+            ronin.Humanoid.Health = 0
+        end
     end
 })
 
