@@ -71,8 +71,8 @@ TP:CreateButton({
 })
 
 INFO:CreateParagraph({
-    Title = "Teleporter Script",
-    Content = "This GUI lets you teleport to preset locations."
+    Title = "wINETER TELEPORTER GUI",
+    Content = "This GUI lets you teleport to lands"
 })
 
 INFO:CreateParagraph({
