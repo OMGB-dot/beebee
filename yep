@@ -59,3 +59,18 @@ TP:CreateButton({
         TPto(Vector3.new(59, 46028, 8299)) 
     end
 })
+
+INFO:CreateParagraph({
+    Title = "Teleporter Script",
+    Content = "This GUI lets you teleport to preset locations."
+})
+
+INFO:CreateParagraph({
+    Title = "There was no scripts for winter ",
+    Content = "so i made it myself"
+})
+
+INFO:CreateParagraph({
+    Title = "Made by",
+    Content = "someone :)"
+})
