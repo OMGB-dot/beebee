@@ -9,8 +9,9 @@ local WN = L:CreateWindow({
 local TP = WN:CreateTab("Teleports", 4483362458)
 
 local LP = game:GetService("Players").LocalPlayer
+local INFO = WN:CreateTab("Info", 4483362458)
 
--- Function to teleport player
+
 local function TPto(pos)
     local char = LP.Character
     if char and char:FindFirstChild("HumanoidRootPart") then
