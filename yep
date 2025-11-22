@@ -12,7 +12,6 @@ local misc = WN:CreateTab("Misc", 4483362458)
 local LP = game:GetService("Players").LocalPlayer
 local INFO = WN:CreateTab("Info", 4483362458)
 
-
 local function TPto(pos)
     local char = LP.Character
     if char and char:FindFirstChild("HumanoidRootPart") then
@@ -100,7 +99,6 @@ INFO:CreateParagraph({
     Title = "To be able to use the kill ronin button",
     Content = "make sure ronin is following you, or else it wont work"
 })
-
 
 INFO:CreateParagraph({
     Title = "Made by",
