@@ -81,7 +81,7 @@ INFO:CreateParagraph({
 })
 
 INFO:CreateParagraph({
-    Title = "To be able to use ronin",
+    Title = "To be able to use the kill ronin button",
     Content = "make sure ronin is following you, or else it wont work"
 })
 
