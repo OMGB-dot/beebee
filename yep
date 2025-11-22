@@ -42,6 +42,20 @@ TP:CreateButton({
 })
 
 TP:CreateButton({
+    Name = "Grassland VendingMachine",
+    Callback = function()
+        TPto(Vector3.new(013577, 4, -605)) 
+    end
+})
+
+TP:CreateButton({
+    Name = "Grassland",
+    Callback = function()
+        TPto(Vector3.new(-12845, 4, 173)) 
+    end
+})
+
+TP:CreateButton({
     Name = "Tahiti",
     Callback = function()
         TPto(Vector3.new(3574, 40, 125)) 
