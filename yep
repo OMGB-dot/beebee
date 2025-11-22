@@ -8,9 +8,18 @@ local WN = L:CreateWindow({
 
 local TP = WN:CreateTab("TP", 4483362458)
 local misc = WN:CreateTab("Misc", 4483362458)
+local INFO = WN:CreateTab("Info", 4483362458)
+local ToolsTab = WN:CreateTab("Tools", 4483362458)
 
 local LP = game:GetService("Players").LocalPlayer
-local INFO = WN:CreateTab("Info", 4483362458)
+local RS = game:GetService("ReplicatedStorage")
+
+local ToolNames = {
+    "car",
+    "Car",
+    "LaserModel",
+    "CoolItem"
+}
 
 local function TPto(pos)
     local char = LP.Character
@@ -22,7 +31,7 @@ end
 TP:CreateButton({
     Name = "Snowland",
     Callback = function()
-        TPto(Vector3.new(0, 0, 0)) 
+        TPto(Vector3.new(0, 0, 0))
     end
 })
 
@@ -36,42 +45,42 @@ TP:CreateButton({
 TP:CreateButton({
     Name = "Grassland",
     Callback = function()
-        TPto(Vector3.new(-12345, 4, 438)) 
+        TPto(Vector3.new(-12345, 4, 438))
     end
 })
 
 TP:CreateButton({
     Name = "Grassland VendingMachine",
     Callback = function()
-        TPto(Vector3.new(-13577, 4, -605)) 
+        TPto(Vector3.new(-13577, 4, -605))
     end
 })
 
 TP:CreateButton({
     Name = "Grassland",
     Callback = function()
-        TPto(Vector3.new(-12845, 4, 173)) 
+        TPto(Vector3.new(-12845, 4, 173))
     end
 })
 
 TP:CreateButton({
     Name = "Tahiti",
     Callback = function()
-        TPto(Vector3.new(3574, 40, 125)) 
+        TPto(Vector3.new(3574, 40, 125))
     end
 })
 
 TP:CreateButton({
     Name = "The moon",
     Callback = function()
-        TPto(Vector3.new(-1, 3059, -2)) 
+        TPto(Vector3.new(-1, 3059, -2))
     end
 })
 
 TP:CreateButton({
     Name = "Mars",
     Callback = function()
-        TPto(Vector3.new(59, 46028, 8299)) 
+        TPto(Vector3.new(59, 46028, 8299))
     end
 })
 
@@ -104,5 +113,31 @@ INFO:CreateParagraph({
     Title = "Made by",
     Content = "someone :)"
 })
+
+local function GiveModelAsTool(model)
+    if not model then return end
+
+    local tool = Instance.new("Tool")
+    tool.Name = model.Name
+    tool.RequiresHandle = false
+
+    for _, v in ipairs(model:GetChildren()) do
+        v:Clone().Parent = tool
+    end
+
+    tool.Parent = LP.Backpack
+end
+
+for _, name in ipairs(ToolNames) do
+    local found = RS:FindFirstChild(name)
+    if found then
+        ToolsTab:CreateButton({
+            Name = name,
+            Callback = function()
+                GiveModelAsTool(found)
+            end
+        })
+    end
+end
 
 L:LoadConfiguration()
