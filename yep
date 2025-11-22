@@ -75,3 +75,5 @@ INFO:CreateParagraph({
     Title = "Made by",
     Content = "someone :)"
 })
+
+L:LoadConfiguration()
