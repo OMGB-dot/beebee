@@ -6,10 +6,12 @@ local WN = L:CreateWindow({
     LoadingSubtitle = "Winter tp gui",
 })
 
-local TP = WN:CreateTab("Teleports", 4483362458)
+local TP = WN:CreateTab("TP", 4483362458)
+local misc = WN:CreateTab("Misc", 4483362458)
 
 local LP = game:GetService("Players").LocalPlayer
 local INFO = WN:CreateTab("Info", 4483362458)
+
 
 local function TPto(pos)
     local char = LP.Character
@@ -60,7 +62,7 @@ TP:CreateButton({
     end
 })
 
-TP:CreateButton({
+misc:CreateButton({
     Name = "Kill Ronin",
     Callback = function()
         local ronin = workspace:FindFirstChild("ronin")
